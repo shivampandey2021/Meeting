@@ -1,0 +1,18 @@
+<section class="container">
+    <div class="login" >
+        <h1>Create Meeting</h1>
+        <span style="color: red">{{createMeetingErr}}</span>
+        <form name="meetingForm">
+            <p><input type="text" name="name" ng-model="MeetingObj.name" placeholder="Meeting Name" required=""></p>
+            <p><input type="text" name="password" ng-model="MeetingObj.startDate" placeholder="Start Date" required=""></p>
+            <span>eg: 2016-04-25</span>
+            <p><input type="text" name="name" ng-model="MeetingObj.startTime" placeholder="Start Time" required=""></p>
+            <span>eg: 15:11:36</span>
+            <p><input type="text" name="password" ng-model="MeetingObj.EndDate" placeholder="End Date" required=""></p>
+            <span>eg: 2016-04-25</span>
+            <p><input type="text" name="name" ng-model="MeetingObj.EndTime" placeholder="End Time" required=""></p>
+            <span>eg: 15:11:36</span>
+            <p class="submit"><input type="submit" ng-click="createMeeting(MeetingObj)" value="Create"></p>
+        </form>
+    </div>
+</section>

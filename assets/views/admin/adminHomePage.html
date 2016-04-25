@@ -1,0 +1,36 @@
+<section class="container">
+    <div class="login" style="width: 800px;height: 400px; margin-left: -119px;">
+        <h1>Admin Dashboard</h1>&nbsp;&nbsp;&nbsp;<span style="color: red">{{noDashboardData}}</span>
+        <div class="totalUse">
+            <div id="rectangle"><span>Total Users</span>
+                <br/><span>{{dashboardData.total_users}}</span>
+            </div><br/>
+            <div id="rectangle"><span>Total Logged-In Users</span>
+                <br/><span>{{dashboardData.loggedin_users}}</span>
+            </div><br/>
+            <div id="rectangle"><span>Total Meetings</span>
+                <br/><span>{{dashboardData.total_meetings}}</span>
+            </div>
+        </div>
+        <div class="afterCounte">
+            <h1>After Counter Cleared</h1>
+            <div id="rectangle"><span>Meetings Scheduled</span>
+                <br/><span>{{dashboardDataAfterClear.scheduled_meeting}}</span>
+            </div><br/>
+            <div id="rectangle"><span>Meetings Cancelled</span>
+                <br/><span>{{dashboardDataAfterClear.cancelled_meeting}}</span>
+            </div><br/>
+            <div id="rectangle"><span>Total Requests</span>
+                <br/><span>{{dashboardDataAfterClear.total_request}}</span>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div style="margin-left: 351px; margin-top: -331px;">
+            <a href="#/usersPage/admin">Logged-In Users</a><br/>
+            <a href="#/meetingPage/admin">Meetings</a><br/>
+            <a ng-if="realTimeFlag === false" href="javascript:void(0)" ng-click="stopRealTimeReport()">Stop Real Time Report</a>
+            <a ng-if="realTimeFlag === true" href="javascript:void(0)" ng-click="startRealTimeReport()">Start Real Time Report</a>
+            <br/><a href="javascript:void(0)" ng-click="clearCounter()">Clear Counter</a>
+        </div>
+    </div>
+</section>

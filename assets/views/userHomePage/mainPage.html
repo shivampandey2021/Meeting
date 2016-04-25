@@ -1,0 +1,23 @@
+<section class="container">
+    <div class="login" style="width: 800px;height: 400px; margin-left: -119px;">
+        <h1>Your Meetings</h1>&nbsp;&nbsp;&nbsp;<span style="color: red">{{meetingErrMsg}}</span>
+        <div ng-if="allMeetings === undefined || allMeetings.length <= 0">
+            {{noMeeting}}
+        </div>
+        <table ng-if="allMeetings !== undefined && allMeetings.length >= 1">
+            <tr>
+                <th>Meeting name</th>
+                <th>Start Date/Time</th>
+                <th>End Date/Time</th>
+                <th>Action</th>
+            </tr>
+            <tr ng-repeat="meeting in allMeetings track by meeting.meeting_id">
+                <td>{{meeting.meeting_name}}</td>
+                <td>{{meeting.start_dt}}/{{meeting.start_time}}</td>
+                <td>{{meeting.end_dt}}/{{meeting.end_time}}</td>
+                <td style="cursor: pointer" ng-click="askForDelete(meeting.meeting_id)">Cancel</td>
+            </tr>
+        </table>
+        <span>Create a Meeting</span><a href="#createMeeting">Create</a>
+    </div>
+</section>

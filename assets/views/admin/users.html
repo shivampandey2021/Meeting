@@ -1,0 +1,23 @@
+<section class="container">
+    <div class="login" style="width: 800px;height: 400px; margin-left: -119px;">
+        <h1>All Logged-in Users</h1>&nbsp;&nbsp;&nbsp;<span style="color: red">{{loggedinUserErr}}</span>
+        <div ng-if="allLoggedInUsers === undefined || allLoggedInUsers.length <= 0">
+            {{noLoggedInUser}}
+        </div>
+        <table ng-if="allLoggedInUsers !== undefined && allLoggedInUsers.length >= 1">
+            <tr>
+                <th>User's Name</th>
+                <th>User's Email</th>
+                <th>Logged-in Period</th>
+                <th>Action</th>
+            </tr>
+            <tr ng-repeat="user in allLoggedInUsers track by user.user_id">
+                <td>{{user.full_name}}</td>
+                <td>{{user.email}}</td>
+                <td ng-bind="timeAgo(user.loggedin_time)"></td>
+                <td style="cursor: pointer" ng-click="askForDeleteUser(user.user_id)">Delete</td>
+            </tr>
+        </table>
+        <span>Home</span>&nbsp;&nbsp;<a href="#/homePage/admin">Home</a>
+    </div>
+</section>

@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Meeting Application</title>
+
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+        <!-- ------------- Angular js ------------------->
+        <script type="text/javascript" src="js/commons/angular.js"></script>
+        <script type="text/javascript" src="js/commons/angular-route_1.2.27.js"></script>
+        <script type="text/javascript" src="js/commons/app.js"></script>
+        <script type="text/javascript" src="js/controllers/rootCtrl.js"></script>
+        <script type="text/javascript" src="views/userHomePage/mainPageCtrl.js"></script>
+        <script type="text/javascript" src="views/meeting/createMeetingCtrl.js"></script>
+        <script type="text/javascript" src="views/admin/adminMeetingCtrl.js"></script>
+        <script type="text/javascript" src="views/admin/usersCtrl.js"></script>
+        <script type="text/javascript" src="views/admin/adminHomeCtrl.js"></script>
+        
+        
+    </head>
+
+    <body ng-controller="rootCtrl">
+        <div style="font-size: initial; float: right; margin-top: -73px; margin-right: 127px; cursor: pointer;" ng-show="logoutFlag" ng-click="logoutUser()">
+           Logout
+        </div>
+        <!-- main page -->
+        <div class="main-page lateral-slide-menu-main-page">
+            <div class="ngViewDiv" ng-view="" autoscroll="true"></div>
+            <div class="clearfix"></div>
+        </div>
+    </body>
+</html>
