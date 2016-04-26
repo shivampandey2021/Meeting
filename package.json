@@ -1,0 +1,31 @@
+{
+  "name": "meeting",
+  "version": "1.0.0",
+  "description": "Meeting application",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.15.0",
+    "mysql": "^2.10.2",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shivamwaviz/Meeting.git"
+  },
+  "keywords": [
+    "meeting",
+    "application"
+  ],
+  "author": "Shivam Pandey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shivamwaviz/Meeting/issues"
+  },
+  "homepage": "https://github.com/shivamwaviz/Meeting"
+}
